@@ -6,9 +6,12 @@ header{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: block;
+
   padding-left: 10%;
-  padding-top: 10%;
+  padding-top: 5%;
+  padding-bottom: 15%;
+  background-color: red;
+  position: relative;
 }
 .entering{
 }
@@ -20,16 +23,57 @@ p{
   color: rgb(255, 255, 255);
   font-size: 2rem;
 }
-.content{
-  margin: 1%;
+.warlock, .hunter, .titan{
+  margin: 10px;
   width: 100px;
-
+  height: 100px;
+  text-align: center;
+  background-size: cover;
 }
-img{
-  display: block;
-  width: 100%;
+.titan{
+  background-image: url(../img/titan.png);
+}
+.warlock{
+  background-image: url(../img/warlock.png);
+}
+.hunter{
+  background-image: url(../img/hunter.png);
+}
+.titan:hover{
+  background-image: url(../img/titan1.png);
+}
+.warlock:hover{
+  background-image: url(../img/warlock1.png);
+}
+.hunter:hover{
+  background-image: url(../img/hunter1.png);
 }
 .side-icon{
   width: 600px;
   display: flex;
+  margin-top: 110px;
+}
+.class-name{
+  display: flex;
+  width: 600px;
+  padding: 10px;
+  text-align: center;
+}
+#class-name{
+  margin: 0 15px 0 15px;
+}
+.platform{
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+  font-size: 2rem;
+}
+.platform-icon{
+  margin: 10px;
+}
+.platform-icon:hover{
+  color: rgb(255, 255, 255);
 }
