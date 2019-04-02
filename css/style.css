@@ -1,27 +1,30 @@
 body{
   background-color: #eee;
+  margin: 0;
+  padding: 0;
 }
 header{
   background-image: url(../img/headwp.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
+display: block;
   padding-left: 10%;
   padding-top: 5%;
   padding-bottom: 15%;
-  background-color: red;
   position: relative;
-}
-.entering{
 }
 h1{
   font-size: 3rem;
   color: rgb(255, 255, 255);
 }
+#entering{
+  margin-left: 40px;
+}
 p{
+  font-weight: bold;
   color: rgb(255, 255, 255);
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 .warlock, .hunter, .titan{
   margin: 10px;
@@ -51,16 +54,7 @@ p{
 .side-icon{
   width: 600px;
   display: flex;
-  margin-top: 110px;
-}
-.class-name{
-  display: flex;
-  width: 600px;
-  padding: 10px;
-  text-align: center;
-}
-#class-name{
-  margin: 0 15px 0 15px;
+  margin-top: 50px;
 }
 .platform{
   display: flex;
@@ -76,4 +70,30 @@ p{
 }
 .platform-icon:hover{
   color: rgb(255, 255, 255);
+}
+.border-line{
+  height: 110px;
+  border: solid white;
+  margin: 0;
+}
+.block{
+  position: relative;
+  cursor: pointer;
+  line-height: 1;
+  width: 170px;
+}
+.block:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+  content: "";
+  transition: width 0.3s ease-out;
+}
+
+.block:hover:after,
+.block:focus:after {
+  width: 100%;
 }
