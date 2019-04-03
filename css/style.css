@@ -18,6 +18,10 @@ h1{
   color: #909281;
   margin-bottom: 0.5vh;
   font-family: 'Noto Sans';
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 #entering{
   margin-left: 3vw;
