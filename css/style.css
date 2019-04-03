@@ -89,7 +89,7 @@ img{
   position: absolute;
   bottom: 0;
   right: 0;
-  margin: 3vh;
+  margin: 0 2vh 1vh 0;
   font-size: 1.4vw;
 }
 .platform-icon{
