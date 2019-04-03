@@ -4,58 +4,83 @@ body{
   padding: 0;
 }
 header{
-  background-image: url(../img/headwp.jpg);
+  background-image: url(../img/headwp1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-left: 10%;
+  padding-left: 5%;
   padding-top: 5%;
   padding-bottom: 15%;
   position: relative;
 }
 h1{
-  font-size: 4vw;
-  color: rgb(255, 255, 255);
-  margin-bottom: 0.6vh;
+  font-size: 3.5vw;
+  color: #909281;
+  margin-bottom: 0.5vh;
+  font-family: 'Noto Sans';
 }
 #entering{
-  margin-left: 4vw;
+  margin-left: 3vw;
 }
 p{
   font-weight: bold;
-  color: rgb(255, 255, 255);
-  font-size: 3vw;
+  color: #909281;
+  font-size: 2.5vw;
+    font-family: 'Noto Sans';
 }
 .warlock, .hunter, .titan{
-  margin: 1%;
-  width: 5vw;
-  height: 10vh;
+  margin:1%;
   text-align: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+  background-color: red;
+  width: 5vw;
 }
-.titan{
-  background-image: url(../img/titan.png);
+img{
+  display: block;
+  width: 100%;
 }
-.warlock{
-  background-image: url(../img/warlock.png);
+.animate2{
+  position:relative;
 }
-.hunter{
-  background-image: url(../img/hunter.png);
+
+.animate2 img {
+  position:absolute;
 }
-.titan:hover{
-  background-image: url(../img/titan1.png);
+.animate2 img.first { /* первая картинка полностью прозрачная */
+
+  opacity:0;
+
+  filter:alpha (opacity=0);
+
 }
-.warlock:hover{
-  background-image: url(../img/warlock1.png);
+
+.animate2:hover img.first { /* при наведении курсора первая картинка становится не прозрачной */
+
+  opacity:1;
+
+  filter:alpha (opacity=100);
+
 }
-.hunter:hover{
-  background-image: url(../img/hunter1.png);
+
+.animate2:hover img.second, .animate2 img.second:hover { /* а вторая при наведении курсора становится прозрачной */
+
+  opacity:0;
+
+  filter:alpha (opacity=0);
+
+}
+.animate2:hover img.second, .animate2 img.second:hover {
+  opacity:0;
+  filter:alpha (opacity=0);
+  -moz-transition: all 2s ease;
+  -webkit-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
 }
 .side-icon{
   display: flex;
-  margin-top: 5vh;
-  margin-left: 5vw;
+  margin-left: 5.5vw;
 }
 .platform{
   display: flex;
@@ -68,21 +93,26 @@ p{
 }
 .platform-icon{
   margin: 5%;
+  color: #65665C;
 }
 .platform-icon:hover{
   color: rgb(255, 255, 255);
+  -moz-transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .block{
   position: relative;
   cursor: pointer;
   line-height: 1;
-  width: 13vw;
+  width: 16.5vw;
 }
 .block:after {
   display: block;
-  position: absolute;
-  border-bottom: double #fafafa 0.3vh;
+  position: relative;
+  border-bottom: solid #fafafa 0.3vh;
   left: 0;
   width: 0;
   content: "";
