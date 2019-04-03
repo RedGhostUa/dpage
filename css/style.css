@@ -4,6 +4,7 @@ body{
   padding: 0;
 }
 header{
+  width: 90%;
   background-image: url(../img/headwp.jpg);
   background-size: cover;
   background-position: center;
@@ -15,7 +16,7 @@ display: block;
   position: relative;
 }
 h1{
-  font-size: 3rem;
+  font-size: 4vw;
   color: rgb(255, 255, 255);
 }
 #entering{
@@ -24,14 +25,15 @@ h1{
 p{
   font-weight: bold;
   color: rgb(255, 255, 255);
-  font-size: 2.5rem;
+  font-size: 3vw;
 }
 .warlock, .hunter, .titan{
-  margin: 10px;
-  width: 100px;
-  height: 100px;
+  margin: 1%;
+  width: 5vw;
+  height: 10vh;
   text-align: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .titan{
   background-image: url(../img/titan.png);
@@ -52,7 +54,6 @@ p{
   background-image: url(../img/hunter1.png);
 }
 .side-icon{
-  width: 600px;
   display: flex;
   margin-top: 50px;
 }
@@ -63,10 +64,10 @@ p{
   bottom: 0;
   right: 0;
   margin: 30px;
-  font-size: 2rem;
+  font-size: 1.5vw;
 }
 .platform-icon{
-  margin: 10px;
+  margin: 5%;
 }
 .platform-icon:hover{
   color: rgb(255, 255, 255);
