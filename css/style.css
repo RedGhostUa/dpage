@@ -51,26 +51,16 @@ img{
 .animate2 img {
   position:absolute;
 }
-.animate2 img.first { /* первая картинка полностью прозрачная */
-
+.animate2 img.first {
   opacity:0;
-
-
 }
 
-.animate2:hover img.first { /* при наведении курсора первая картинка становится не прозрачной */
-
+.animate2:hover img.first {
   opacity:1;
-
-
 }
 
-.animate2:hover img.second, .animate2 img.second:hover { /* а вторая при наведении курсора становится прозрачной */
-
+.animate2:hover img.second, .animate2 img.second:hover {
   opacity:0;
-
-  filter:alpha (opacity=0);
-
 }
 .animate2:hover img.second, .animate2 img.second:hover {
   opacity:0;
