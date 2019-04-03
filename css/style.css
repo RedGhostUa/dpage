@@ -4,12 +4,10 @@ body{
   padding: 0;
 }
 header{
-  width: 90%;
   background-image: url(../img/headwp.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-display: block;
   padding-left: 10%;
   padding-top: 5%;
   padding-bottom: 15%;
@@ -18,9 +16,10 @@ display: block;
 h1{
   font-size: 4vw;
   color: rgb(255, 255, 255);
+  margin-bottom: 0.6vh;
 }
 #entering{
-  margin-left: 40px;
+  margin-left: 4vw;
 }
 p{
   font-weight: bold;
@@ -55,7 +54,8 @@ p{
 }
 .side-icon{
   display: flex;
-  margin-top: 50px;
+  margin-top: 5vh;
+  margin-left: 5vw;
 }
 .platform{
   display: flex;
@@ -72,24 +72,19 @@ p{
 .platform-icon:hover{
   color: rgb(255, 255, 255);
 }
-.border-line{
-  height: 110px;
-  border: solid white;
-  margin: 0;
-}
+
 .block{
   position: relative;
   cursor: pointer;
   line-height: 1;
-  width: 170px;
+  width: 13vw;
 }
 .block:after {
   display: block;
   position: absolute;
+  border-bottom: double #fafafa 0.3vh;
   left: 0;
   width: 0;
-  height: 5px;
-  background-color: rgb(255, 255, 255);
   content: "";
   transition: width 0.3s ease-out;
 }
