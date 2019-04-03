@@ -25,7 +25,7 @@ h1{
 p{
   font-weight: bold;
   color: #909281;
-  font-size: 2.5vw;
+  font-size: 2vw;
     font-family: 'Noto Sans';
 }
 .warlock, .hunter, .titan{
@@ -73,14 +73,15 @@ img{
 .animate2:hover img.second, .animate2 img.second:hover {
   opacity:0;
   filter:alpha (opacity=0);
-  -moz-transition: all 2s ease;
-  -webkit-transition: all 2s ease;
-  -o-transition: all 2s ease;
-  transition: all 2s ease;
+  -moz-transition: all 0.69s ease;
+  -webkit-transition: all 0.69s ease;
+  -o-transition: all 0.69s ease;
+  transition: all 0.69s ease;
 }
 .side-icon{
   display: flex;
   margin-left: 5.5vw;
+  margin-bottom: 5vw;
 }
 .platform{
   display: flex;
@@ -88,8 +89,8 @@ img{
   position: absolute;
   bottom: 0;
   right: 0;
-  margin: 30px;
-  font-size: 1.5vw;
+  margin: 3vh;
+  font-size: 1.4vw;
 }
 .platform-icon{
   margin: 5%;
@@ -107,7 +108,7 @@ img{
   position: relative;
   cursor: pointer;
   line-height: 1;
-  width: 16.5vw;
+  width: 15.2vw;
 }
 .block:after {
   display: block;
@@ -122,4 +123,13 @@ img{
 .block:hover:after,
 .block:focus:after {
   width: 100%;
+}
+.quote{
+position: absolute;
+right: 0;
+top: 0;
+width: 30vw;
+height: 10vh;
+white-space: pre;
+font-size: 5px;;
 }
