@@ -1,9 +1,14 @@
-body{
+body {
   background-color: #eee;
   margin: 0;
   padding: 0;
 }
-header{
+.ws{
+  width: 100%;
+  height: 1vh;
+  background-color: #909281;
+}
+header {
   background-image: url(../img/headwp1.jpg);
   background-size: cover;
   background-position: center;
@@ -13,7 +18,8 @@ header{
   padding-bottom: 15%;
   position: relative;
 }
-h1{
+
+h1 {
   font-size: 3.5vw;
   color: #909281;
   margin-bottom: 0.5vh;
@@ -23,58 +29,66 @@ h1{
   -webkit-user-select: none;
   user-select: none;
 }
-#entering{
+
+#entering {
   margin-left: 3vw;
 }
-p{
+
+p {
   font-weight: bold;
   color: #909281;
   font-size: 2vw;
-    font-family: 'Noto Sans';
+  font-family: 'Noto Sans';
 }
-.warlock, .hunter, .titan{
-  margin:1%;
+
+.warlock, .hunter, .titan {
+  margin: 1%;
   text-align: center;
   display: block;
   position: relative;
-  background-color: red;
   width: 5vw;
 }
-img{
+
+img {
   display: block;
   width: 100%;
 }
-.animate2{
-  position:relative;
+
+.animate2 {
+  position: relative;
 }
 
 .animate2 img {
-  position:absolute;
+  position: absolute;
 }
+
 .animate2 img.first {
-  opacity:0;
+  opacity: 0;
 }
 
 .animate2:hover img.first {
-  opacity:1;
+  opacity: 1;
 }
 
 .animate2:hover img.second, .animate2 img.second:hover {
-  opacity:0;
+  opacity: 0;
 }
+
 .animate2:hover img.second, .animate2 img.second:hover {
-  opacity:0;
+  opacity: 0;
   -moz-transition: all 0.69s ease;
   -webkit-transition: all 0.69s ease;
   -o-transition: all 0.69s ease;
   transition: all 0.69s ease;
 }
-.side-icon{
+
+.side-icon {
   display: flex;
   margin-left: 5.5vw;
   margin-bottom: 5vw;
 }
-.platform{
+
+.platform {
   display: flex;
   justify-content: flex-end;
   position: absolute;
@@ -83,11 +97,14 @@ img{
   margin: 0 2vh 1vh 0;
   font-size: 1.4vw;
 }
-.platform-icon{
+
+.platform-icon {
   margin: 5%;
   color: #65665C;
+
 }
-.platform-icon:hover{
+
+.platform-icon:hover {
   color: rgb(255, 255, 255);
   -moz-transition: all 0.7s ease;
   -webkit-transition: all 0.7s ease;
@@ -95,12 +112,13 @@ img{
   transition: all 0.7s ease;
 }
 
-.block{
+.block {
   position: relative;
   cursor: pointer;
   line-height: 1;
   width: 15.2vw;
 }
+
 .block:after {
   display: block;
   position: relative;
@@ -115,12 +133,113 @@ img{
 .block:focus:after {
   width: 100%;
 }
-.quote{
-position: absolute;
-right: 0;
-top: 0;
-width: 30vw;
-height: 10vh;
-white-space: pre;
-font-size: 5px;;
+
+.quote {
+  margin-top: 5%;
+  margin-right: 1.5vw;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30vw;
+  height: 10vh;
+  white-space: pre;
+  font-size: 1rem;
+}
+
+.slider {
+  width:100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider__wrapper {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slider__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 1980px) {
+  .slider__item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+.slider__control {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+  height: 50px;
+  transform: translateY(-50%);
+}
+
+.slider__control:hover,
+.slider__control:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: .9;
+}
+
+.slider__control_left {
+  left: 0;
+}
+
+.slider__control_right {
+  right: 0;
+}
+
+.slider__control::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.slider__control_left::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.slider__control_right::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.slider__item {
+text-align: center;
+}
+main{
+  display: flex;
+  justify-content: space-around;
+  padding: 2%;
+}
+.arc, .solar, .void{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.arcicon{
+  background-color: rgb(71, 71, 71);
+  box-sizing: border-box;
+  border-radius: 50%;
+  height: 10vw;
+  width: 10vw;
+  text-align: center;
+  align-items: center;
+  padding: 2vw;
+}
+.arctext{
+  text-align: center;
+  align-items: center;
 }
