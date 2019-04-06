@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/style.css">
   <meta charset="utf-8">
   <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <title>Destiny</title>
 </head>
 
@@ -22,42 +23,48 @@
       <h1>Guardian</h1>
     </div>
     <p id="entering">Choose your class</p>
-    <div class="side-icon">
+    <div class="side-icon" id="yak">
       <div class="titan">
-        <div class="animate2">
+        <a href="#titan">
+          <div class="animate2">
 
-          <img class="first" src="img/titan1.png" />
+            <img class="first" src="img/titan1.png" />
 
-          <img class="second" src="img/titan.png" />
-        </div>
+            <img class="second" src="img/titan.png" />
+          </div>
+        </a>
       </div>
 
       <div class="warlock">
-        <div class="animate2">
+        <a href="#warlock">
+          <div class="animate2">
+            <img class="first" src="img/warlock1.png" />
 
-          <img class="first" src="img/warlock1.png" />
+            <img class="second" src="img/warlock.png" />
 
-          <img class="second" src="img/warlock.png" />
-
-        </div>
+          </div>
+          <a>
       </div>
 
       <div class="hunter">
-        <div class="animate2">
+        <a href="#hunter">
+          <div class="animate2">
 
-          <img class="first" src="img/hunter1.png" />
+            <img class="first" src="img/hunter1.png" />
 
-          <img class="second" src="img/hunter.png" />
+            <img class="second" src="img/hunter.png" />
 
-        </div>
+          </div>
+          <a>
       </div>
     </div>
 
-    <div class="platform">
+    <!--<div class="platform">
       <div class="platform-icon"><i class="fab fa-android"></i></div>
       <div class="platform-icon"><i class="fab fa-apple"></i></div>
       <div class="platform-icon"><i class="fab fa-windows"></i></div>
     </div>
+  -->
     <div class="quote">
 <p>    "Devotion inspires bravery,
 
@@ -65,8 +72,50 @@
 
 sacrifice leads to death"</p>
     </div>
+    <nav id="yak1">
+      <a href="#Gallary" style="text-decoration: none;">
+        <div class="nav-button">
+          <p style="font-size: 1.7vw;">Gallary</p>
+        </div>
+      </a>
+      <a href="#subclass" style="text-decoration: none;">
+        <div class="nav-button">
+          <p style="font-size: 1.7vw;">App</p>
+        </div>
+      </a>
+      <a href="#subclass" style="text-decoration: none;">
+        <div class="nav-button">
+          <p style="font-size: 1.7vw;">Subclass</p>
+        </div>
+      </a>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $("#yak1").on("click", "a", function(event) {
+            event.preventDefault();
+            var id = $(this).attr('href'),
+              top = $(id).offset().top;
+            $('body,html').animate({
+              scrollTop: top
+            }, 1500);
+          });
+        });
+      </script>
+    </nav>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#yak").on("click", "a", function(event) {
+          event.preventDefault();
+          var id = $(this).attr('href'),
+            top = $(id).offset().top;
+          $('body,html').animate({
+            scrollTop: top
+          }, 1500);
+        });
+      });
+    </script>
   </header>
-  <div class="slider">
+  <!--
+  <div class="slider" id="slider">
     <div class="slider__wrapper">
       <div class="slider__item">
         <div><img src="img/t.jpg" style="width: 100%" alt=""></div>
@@ -346,40 +395,105 @@ sacrifice leads to death"</p>
       isCycling: true
     })
   </script>
+-->
   <main>
-      <div class="arc">
-        <div class="arcicon">
-          <img src="img/arc.png" alt="">
-        </div>
-        <div class="arctext">
-          <h4 style="font-family: 'Nunito'; font-size: 3.5vh;">Arc Subclass</h4>
-          <p style="font-size: 3vh; color: rgb(71, 71, 71);">Energy overflows you</p>
-        </div>
+    <div class="arc" id="subclass">
+      <div class="arcicon">
+        <img src="img/arc.png" alt="">
       </div>
-      <div class="solar">
-        <div class="arcicon">
-          <img src="img/solar.png" alt="">
-        </div>
-        <div class="arctext">
-          <h4 style="font-family: 'Nunito'; font-size: 3.5vh;">Solar Subclass</h4>
-          <p style="font-size: 3vh; color: rgb(71, 71, 71);">You seep out the light</p>
-        </div>
+      <div class="arctext">
+        <h4 style="font-family: 'Nunito'; font-size: 2.5vw;">Arc Subclass</h4>
+        <p style="font-size: 1.5vw; color: rgb(71, 71, 71);">Energy overflows you</p>
       </div>
-      <div class="void">
-        <div class="arcicon">
-          <img src="img/void.png" alt="">
-        </div>
-        <div class="arctext">
-          <h4 style="font-family: 'Nunito'; font-size: 3.5vh;">Void Subclass</h4>
-          <p style="font-size: 3vh; color: rgb(71, 71, 71);">Void trusted you</p>
-        </div>
+    </div>
+    <div class="solar">
+      <div class="arcicon">
+        <img src="img/solar.png" alt="">
       </div>
-
+      <div class="arctext">
+        <h4 style="font-family: 'Nunito'; font-size: 2.5vw;">Solar Subclass</h4>
+        <p style="font-size: 1.5vw; color: rgb(71, 71, 71);">You seep out the light</p>
+      </div>
+    </div>
+    <div class="void">
+      <div class="arcicon">
+        <img src="img/void.png" alt="">
+      </div>
+      <div class="arctext">
+        <h4 style="font-family: 'Nunito'; font-size: 2.5vw;">Void Subclass</h4>
+        <p style="font-size: 1.5vw; color: rgb(71, 71, 71);">Void trusted you</p>
+      </div>
+    </div>
 
   </main>
+  <div class="inf" id="titan">
+    <div class="classimg">
+      <img src="img/titan/titan1.jpg">
+    </div>
+    <div class="classinf">
+      <div id="titanlogo">
+        <div><img src="img/titanlogo.png" alt=""></div>
+      </div>
+      <div>
+        <p style="font-size: 1.5vw; color: rgb(71, 71, 71);">"What does it mean to be a Titan? As a Titan, you are a part of the City - in a way no Warlock or Hunter could understand. The dream of the City rests upon our shoulders."
+          — Commander Zavala</p>
+      </div>
+    </div>
+  </div>
 
+  <div class="inf" id="warlock">
+    <div class="classinf">
+      <div id="titanlogo">
+        <div><img src="img/warlocklogo.png" alt=""></div>
+      </div>
+      <div>
+        <p style="font-size: 1.5vw; color: rgb(71, 71, 71);">"What does it mean to be a Warlock? Power. Only Warlocks understand true power."
+          — Ikora Rey</p>
+      </div>
+    </div>
 
+    <div class="classimg">
+      <img src="img/warlock.jpg">
+    </div>
+  </div>
 
+  <div class="inf" id="hunter">
+    <div class="classimg">
+      <img src="img/hunter.jpg">
+    </div>
+    <div class="classinf">
+      <div id="titanlogo">
+        <div><img src="img/hunterlogo.png" alt=""></div>
+      </div>
+      <div>
+        <p style="font-size: 1.5vw; color: rgb(71, 71, 71);">"What does it mean to be a Hunter? I say, it’s all about where you belong. The Warlocks have their libraries, the Titans have their walls...But Hunters belong in the wilds."
+          — Cayde-6</p>
+      </div>
+    </div>
+  </div>
+  <div class="slider" style="width: 100%;" id="Gallary">
+    <img class="mySlides" src="img/t.jpg" style="width:100%">
+    <img class="mySlides" src="img/w.jpg" style="width:100%">
+    <img class="mySlides" src="img/h.jpg" style="width:100%">
+    <img class="mySlides" src="img/hwt.jpg" style="width:100%">
+  </div>
+
+  <script>
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+  </script>
 </body>
 
 </html>
