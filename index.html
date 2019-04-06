@@ -72,7 +72,7 @@
           <p style="font-size: 1.5vw;">Gallary</p>
         </div>
       </a>
-      <a href="#subclass" style="text-decoration: none;">
+      <a href="#app" style="text-decoration: none;">
         <div class="nav-button">
           <p style="font-size: 1.5vw;">App</p>
         </div>
@@ -82,6 +82,13 @@
           <p style="font-size: 1.5vw;">Subclass</p>
         </div>
       </a>
+      <a href="#memory">
+      <div class="nav-button">
+        <div id="titanlogo">
+          <div><img src="img/aceofspades.png" alt=""></div>
+        </div>
+      </div>
+    </a>
       <script type="text/javascript">
         $(document).ready(function() {
           $("#yak1").on("click", "a", function(event) {
@@ -493,13 +500,80 @@
   </script>
 -->
 <div class="ws"></div>
-  <div class="app">
+  <div class="app" id="app">
+    <div class="apptext">
+      <p>The official Destiny 2 Companion App keeps you connected to your Destiny adventure wherever life takes you. Join using PlayStation Network, Xbox Live, or Battle.net.
+</p>
+    </div>
     <div class="platform">
-      <div class="platform-icon"><p class="fab fa-android"></p></div>
-      <div class="platform-icon"><p class="fab fa-apple"></p></div>
-      <div class="platform-icon"><p class="fab fa-windows"></p></div>
+      <div class="platform-icon"><a href="https://play.google.com/store/apps/details?id=com.bungieinc.bungiemobile&hl=en_US"><p class="fab fa-android"></p></a></div>
+      <div class="platform-icon"><a href="https://itunes.apple.com/us/app/destiny-2-companion/id441444902?mt=8"><p class="fab fa-apple"></p></a></div>
+      <div class="platform-icon"><a href="https://www.microsoft.com/en-us/p/advanced-destiny-companion/9nblggh3lwws?activetab=pivot:overviewtab"><p class="fab fa-windows"></p></a></div>
     </div>
   </div>
+  <div class="ws"></div>
+    <div class="mem" id="memory">
+      <div>
+        <h3  style="font-family: 'Nunito'; font-size: 2.5vw;">In memory of Cayde-6</h3>
+      </div>
+    </div>
+    <div class="inf">
+      <div class="classimg">
+        <video src="img/cayde.mp4" controls="controls" preload="none" style="width: 60vw;">
+
+        </video>
+      </div>
+      <div class="classinf">
+        <div id="titanlogo">
+          <div><img src="img/aceofspades.png" alt=""></div>
+        </div>
+        <div id="memory">
+          <p style="font-size: 1.5vw; color: rgb(71, 71, 71);">"I’m coming home, Ace"
+            — Cayde-6</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ws"></div>
+    <div class="slider" style="width: 100%;" id="Gallary">
+        <img class="mySlides" src="img/t.jpg" style="width:100%">
+        <img class="mySlides" src="img/w.jpg" style="width:100%">
+        <img class="mySlides" src="img/h.jpg" style="width:100%">
+        <img class="mySlides" src="img/hwt.jpg" style="width:100%">
+      </div>
+
+      <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+      </script>
+<footer>
+  <div class="address">
+    <p style="font-size: 0.8vw; color: rgb(71, 71, 71);">AOD New York </p>
+    <p style="font-size: 0.8vw; color: rgb(71, 71, 71);">2250 Lexington Avenue</p>
+    <p style="font-size: 0.8vw; color: rgb(71, 71, 71);">New York, NY 10035 - info@domain.com</p>
+  </div>
+  <div class="network">
+    <div class="instagram"><p class="fab fa-instagram" style="background-color"></p></div>
+    <div class="twitter"><p class="fab fa-twitter"></p></div>
+    <div class="facebook"><p class="fab fa-facebook-f"><p></div>
+  </div>
+  <div class="crafted">
+    <p style="font-size: 0.8vw; color: rgb(71, 71, 71);">Crafted by <span style="font-size: 1vw;">RedGhost</span></p>
+  </div>
+</footer>
+
 </body>
 
 </html>
