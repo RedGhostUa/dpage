@@ -230,7 +230,7 @@ main{
   box-sizing: border-box;
 }
 .platform-icon:hover{
-  background-color: rgba(48, 208, 64, 0.8);
+  background-color: rgba(72, 30, 213);
   transition: 0.7s ease;
 }
 .apptext{
